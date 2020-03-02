@@ -51,4 +51,10 @@ public class MainController
 		return custRepo.findAll();
 	}
 
+	@GetMapping(path="/CustomerLastName")
+	public @ResponseBody Iterable<Customer> getCustomerWithLastName(@RequestParam String last)
+	{
+		return custRepo.findByLastName(last);
+	}
+
 }
