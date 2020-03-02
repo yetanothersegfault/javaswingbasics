@@ -57,4 +57,10 @@ public class MainController
 		return custRepo.findByLastName(last);
 	}
 
+	@GetMapping(path="/GetCustomerById")
+	public @ResponseBody Customer getCustomerById(@RequestParam long id)
+	{
+		return custRepo.findById(id);
+	}
+
 }
