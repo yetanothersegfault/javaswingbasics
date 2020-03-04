@@ -23,11 +23,6 @@
             <td th:text="${city.id}">ID</td>
             <td th:text="${city.name}">Name</td>
             <td th:text="${city.population}">Population</td>
-            <td>
-                <a th:href="/@{'/edit/' + ${city.id}}">Edit</a>
-                &nbsp;&nbsp;&nbsp;
-                <a th:href="/@{'/delete/' + ${city.id}}">Delete</a>
-            </td>
         </tr>
         </tbody>
     </table>
