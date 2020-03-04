@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
+import java.util.List;
 
 @Controller // This means that this class is a Controller
 @RequestMapping(path="/demo") // This means URL's start with /demo (after Application Path)
@@ -67,7 +68,7 @@ public class MainController
 	@GetMapping(path="/ShowAllCustomers")
 	public String showAllCustomers(Model model)
 	{
-		Customer cust = (List<Customer) custRepo.findAll();
+		List<Customer> cust = (List<Customer>) custRepo.findAll();
 
 		model.addAttribute("customers", cust);
 
