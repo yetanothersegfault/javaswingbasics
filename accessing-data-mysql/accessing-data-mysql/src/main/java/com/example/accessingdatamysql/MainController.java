@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
 
 @Controller // This means that this class is a Controller
 @RequestMapping(path="/demo") // This means URL's start with /demo (after Application Path)
@@ -61,6 +62,16 @@ public class MainController
 	public @ResponseBody Customer getCustomerById(@RequestParam long id)
 	{
 		return custRepo.findById(id);
+	}
+
+	@GetMapping(path="/ShowAllCustomers")
+	public String showAllCustomers(Model model)
+	{
+		Customer cust = (List<Customer) custRepo.findAll();
+
+		model.addAttribute("customers", cust);
+
+		return "ShowAllCustomers";
 	}
 
 }
