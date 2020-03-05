@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Customers</title>
     <meta charset="UTF-8">
@@ -15,13 +16,11 @@
         <th>Last Name</th>
     </tr>
 
-    <#list cities as city>
-    <tr>
-        <td>${city.id}</td>
-        <td>${city.first_name}</td>
-        <td>${city.last_name}</td>
+    <tr th:each="cust : ${cust}">
+        <td>${cust.id}</td>
+        <td>${cust.first_name}</td>
+        <td>${cust.last_name}</td>
     </tr>
-</#list>
 </table>
 </body>
 </html>
