@@ -72,7 +72,7 @@ public class MainController
 
 		model.addAttribute("customers", cust);
 
-		return "ShowAllCustomers";
+		return "showAllCustomers";
 	}
 
 }
