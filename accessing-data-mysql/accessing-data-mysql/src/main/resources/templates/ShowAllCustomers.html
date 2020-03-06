@@ -16,10 +16,10 @@
         <th>Last Name</th>
     </tr>
 
-    <tr th:each="cust : ${customers}">
-        <td>${cust.id}</td>
-        <td>${cust.first_name}</td>
-        <td>${cust.last_name}</td>
+    <tr th:each="customers : ${customers}">
+        <td>${customers.id}</td>
+        <td>${customers.firstName}</td>
+        <td>${customers.lastName}</td>
     </tr>
 </table>
 </body>
