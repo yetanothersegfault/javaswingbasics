@@ -37,6 +37,6 @@ public class Customer
     }
 
     public String getLastName() {
-        return first_name;
+        return last_name;
     }
 }
