@@ -16,9 +16,9 @@ public class Customer
 
     protected Customer() {}
 
-    public Customer(String firstName, String lastName) {
-        first_name = firstName;
-        last_name = lastName;
+    public Customer(String first_name, String last_name) {
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
 
     @Override
